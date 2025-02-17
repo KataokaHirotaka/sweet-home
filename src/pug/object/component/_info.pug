@@ -1,0 +1,67 @@
+-
+block name
+
+-
+  var arr = [
+    {
+      title: "テキスト",
+      link: "",
+      img: "assets/img/02.jpg",
+      date: "2025/02/17"
+    },
+    {
+      title: "テキスト",
+      link: "",
+      img: "assets/img/02.jpg",
+      date: "2025/02/17"
+    },
+    {
+      title: "テキスト",
+      link: "",
+      img: "assets/img/02.jpg",
+      date: "2025/02/17"
+    },
+    {
+      title: "テキスト",
+      link: "",
+      img: "assets/img/02.jpg",
+      date: "2025/02/17"
+    },
+  ]
+
+  var catogoryArr =[
+    {
+      txt: "ご案内",
+      link: ""
+    },
+    {
+      txt: "ご利用料金",
+      link: ""
+    },
+    {
+      txt: "特徴",
+      link: ""
+    },
+  ]
+#info.c-info_wrapper.section-wrapper.container
+  section
+    h2 ご案内
+    p 東京都立川市で夜間託児保育所をお探しなら、めばえひろばを是非ご利用ください。立川駅南口より徒歩6分。40畳の広々な環境です。月極、一時預かりどちらもご対応いたします。「子どもたちが安心して過ごせる」をもっとうに、夜働くママさんパパさんを応援しています！
+    .list-wrapper 
+      //- p カテゴリー
+      //- ul.category-list
+        each val in catogoryArr
+          li
+            a(href="")
+              p #{val.txt}
+    ul.list
+      each val in arr
+        li.list-item
+          a(href="") 
+            figure
+              img(src=val.img)
+            h3 #{val.title}
+            p.tag
+            //- button.btn
+            //-   p MORE
+        

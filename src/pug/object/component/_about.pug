@@ -1,0 +1,47 @@
+-
+block name
+
+-
+ var arr = [
+    {
+      ttl: "託児所の名称",
+      txt: "スイートホーム"
+    },
+    {
+      ttl: "運営会社",
+      txt: "スイートホーム"
+    },
+    {
+      ttl: "代表者",
+      txt: "スイートホーム"
+    },
+    {
+      ttl: "園長",
+      txt: "スイートホーム"
+    },
+    {
+      ttl: "所在地",
+      txt: "スイートホーム"
+    },
+    {
+      ttl: "連絡先",
+      txt: "スイートホーム"
+    },
+    {
+      ttl: "事業内容",
+      txt: "スイートホーム"
+    },
+  ]
+
+
+#about.c-about_wrapper.section-wrapper.container
+  section
+    h2 スイートホームについて
+    p 託児所の概要
+    table
+      each val in arr
+        tr 
+          td #{val.ttl}
+          td #{val.txt}
+    div.iframe-wrapper
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.2207451480913!2d139.4182473!3d35.6961851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e1ab88e56069%3A0x74778e45d9621f9c!2z44CSMTkwLTAwMjIg5p2x5Lqs6YO956uL5bed5biC6Yym55S677yR5LiB55uu77yY4oiS77yR77yUIDZm!5e0!3m2!1sja!2sjp!4v1739785437214!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

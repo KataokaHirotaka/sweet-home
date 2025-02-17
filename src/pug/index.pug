@@ -1,0 +1,19 @@
+extends ./layout/_layout
+
+block meta
+  -
+    const meta = {
+      title:"スイートホーム",
+      description: "",
+    }
+
+block name
+  - const name = "home"
+
+block contents
+
+      include ./object/component/_top
+      include ./object/component/_new
+      include ./object/component/_info
+      include ./object/component/_about
+      include ./object/component/_contact

@@ -1,0 +1,40 @@
+@use "../../foundation/mixin" as mixin;
+@use "../../foundation/variable" as var;
+
+#about {
+  p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+  }
+  table {
+    margin-top: 32px;
+  }
+  .iframe-wrapper {
+    margin-top: 48px;
+  }
+  iframe {
+    width: 100vw;
+    margin-left: calc(((100vw - 100%) / 2) * -1);
+    margin-right: calc(((100vw - 100%) / 2) * -1);
+    vertical-align: bottom;
+  }
+  table {
+    width: 100%;
+    font-weight: bold;
+    tr {
+      display: flex;
+      flex: wrap;
+      border-bottom: 1px solid #bbb;
+      td {
+        padding: 16px 10px;
+        &:first-child {
+          width: 30%;
+        }
+        &:last-child {
+          width: 70%;
+        }
+      }
+    }
+  }
+}

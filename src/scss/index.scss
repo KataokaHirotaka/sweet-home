@@ -1,0 +1,19 @@
+// Foundation
+@forward "./foundation/base";
+
+// Layout
+@forward "./layout/layout";
+
+// Object Component
+@forward "./object/component/c-top";
+@forward "./object/component/c-new";
+@forward "./object/component/c-about";
+@forward "./object/component/c-contact";
+@forward "./object/component/c-info";
+
+// Pages
+@forward "./pages/home";
+// @forward "./pages/business";
+// @forward "./pages/terms";
+// @forward "./pages/privacy";
+// @forward "./pages/transaction";

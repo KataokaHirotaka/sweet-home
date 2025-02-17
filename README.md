@@ -7,4 +7,3 @@ http://aga.basement.jp/
 960px
 
 # sweet_home
-# sweet-home
