@@ -2,16 +2,25 @@
 @use "../../foundation/variable" as var;
 
 #about {
+  padding-bottom: 0px;
   p {
-    margin-top: 10px;
+    margin-top: 32px;
     text-align: center;
-    font-size: 18px;
+    background-color: var.$bcg-color;
+    font-size: 24px;
+    font-weight: bold;
+    @include mixin.mq(medium) {
+      font-size: 20px;
+    }
   }
   table {
-    margin-top: 32px;
+    margin-top: 10px;
+    @include mixin.mq(medium) {
+      margin-top: 24px;
+    }
   }
   .iframe-wrapper {
-    margin-top: 48px;
+    margin-top: 100px;
   }
   iframe {
     width: 100vw;
@@ -28,11 +37,13 @@
       border-bottom: 1px solid #bbb;
       td {
         padding: 16px 10px;
+        font-family: var.$yomogi;
         &:first-child {
-          width: 30%;
+          width: 40%;
+          font-weight: bold;
         }
         &:last-child {
-          width: 70%;
+          width: 60%;
         }
       }
     }

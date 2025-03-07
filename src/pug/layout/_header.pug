@@ -1,7 +1,27 @@
+-
+  var navArr = [
+    {
+      txt: "新着情報",
+      link: "#new"
+    },
+    {
+      txt: "ご案内",
+      link: "#info"
+    },
+    {
+      txt: "スイートホームについて",
+      link: "#about"
+    },
+    {
+      txt: "お問い合わせ",
+      link: "#contact"
+    }
+  ]
+
+
+
 header.l-header
   .l-header_inner
-    //- .l-header_logo
-    //-   img(src="/assets/img/logo.svg", alt="")
     .l-headerNavBtn_wrapper.js-navBtn
       .l-header_navBtn
         span
@@ -9,22 +29,6 @@ header.l-header
     nav.l-header_nav
       .l-headerNav_inner
         ul.l-headerAnchor_links.js-anchor
-          li
-            a(href="#new") 新着情報
-          li
-            a(href="#info") ご案内
-          li
-            a(href="#supervise") ご利用料金
-          li
-            a(href="#about") スイートホームについて
-          li
-            a(href="#contact") お問い合わせ
-          //- li
-          //-   a(href="#faq") よくあるご質問
-        ul.l-headerNav_list
-          li
-            a(href="/privacy") プライバシーポリシー
-          //- li
-          //-   a(href="/transaction-law") 特定商取引法に基づく表記
-          //- li
-          //-   a(href="/terms") 利用規約
+          each val in navArr
+            li
+              a(href=`${val.link}`) #{val.txt}

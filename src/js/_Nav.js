@@ -46,8 +46,8 @@ export default class Nav {
 
   onScroll() {
     this.$body.removeClass("_fixed");
-    // this.$body.css
     $(window).scrollTop(this.savedTop);
+    console.log($(window).scrollTop(this.savedTop));
   }
 
   getTop() {

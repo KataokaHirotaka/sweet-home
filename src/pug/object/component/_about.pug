@@ -2,46 +2,50 @@
 block name
 
 -
- var arr = [
+  var arr = [
     {
       ttl: "託児所の名称",
       txt: "スイートホーム"
     },
-    {
-      ttl: "運営会社",
-      txt: "スイートホーム"
-    },
-    {
-      ttl: "代表者",
-      txt: "スイートホーム"
-    },
-    {
-      ttl: "園長",
-      txt: "スイートホーム"
-    },
+    //- {
+    //-   ttl: "運営会社",
+    //-   txt: "スイートホーム"
+    //- },
+    //- {
+    //-   ttl: "代表者",
+    //-   txt: "スイートホーム"
+    //- },
+    //- {
+    //-   ttl: "園長",
+    //-   txt: "スイートホーム"
+    //- },
     {
       ttl: "所在地",
-      txt: "スイートホーム"
+      txt: "〒190-0023",
+      txt_2: "東京都立川市柴崎町3丁目8-6ラング　タワービル立川902"
     },
-    {
-      ttl: "連絡先",
-      txt: "スイートホーム"
-    },
-    {
-      ttl: "事業内容",
-      txt: "スイートホーム"
-    },
+    //- {
+    //-   ttl: "連絡先",
+    //-   txt: "スイートホーム"
+    //- },
+    //- {
+    //-   ttl: "事業内容",
+    //-   txt: "スイートホーム"
+    //- },
   ]
 
 
 #about.c-about_wrapper.section-wrapper.container
   section
-    h2 スイートホームについて
-    p 託児所の概要
-    table
+    h2.fadeIn スイートホームについて
+    p.fadeIn 託児所の概要
+    table.fadeIn
       each val in arr
         tr 
           td #{val.ttl}
           td #{val.txt}
+            if val.txt_2
+              br
+              |#{val.txt_2}
     div.iframe-wrapper
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.2207451480913!2d139.4182473!3d35.6961851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e1ab88e56069%3A0x74778e45d9621f9c!2z44CSMTkwLTAwMjIg5p2x5Lqs6YO956uL5bed5biC6Yym55S677yR5LiB55uu77yY4oiS77yR77yUIDZm!5e0!3m2!1sja!2sjp!4v1739785437214!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.222782499918!2d139.41868988391417!3d35.696134957668754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e17bcf9c83c7%3A0x480f02fa144fa329!2z44CSMTkwLTAwMjMg5p2x5Lqs6YO956uL5bed5biC5p-05bSO55S677yT5LiB55uu77yY4oiS77yWIOODqeODs-OCsOODu-OCv-ODr-ODvOODk-ODq-eri-W3nQ!5e0!3m2!1sja!2sjp!4v1741007947597!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
