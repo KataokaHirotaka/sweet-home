@@ -6,14 +6,13 @@
 
 // Object Component
 @forward "./object/component/c-top";
-@forward "./object/component/c-new";
+@forward "./object/component/c-news";
 @forward "./object/component/c-about";
 @forward "./object/component/c-contact";
 @forward "./object/component/c-info";
+@forward "./object/component/c-priceTable";
 
 // Pages
 @forward "./pages/home";
-// @forward "./pages/business";
-// @forward "./pages/terms";
-// @forward "./pages/privacy";
-// @forward "./pages/transaction";
+@forward "./pages/news";
+@forward "./pages/info";

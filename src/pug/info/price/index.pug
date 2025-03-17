@@ -1,0 +1,18 @@
+extends ./../../layout/_layout
+
+block meta
+  -
+    const meta = {
+      title:"",
+      description: "",
+    }
+
+block name
+  - const name = "price"
+
+block contents
+  main#info 
+    .container
+      h2 ご案内
+      include ./../../layout/_breadcrumb
+      include ./../../object/component/_priceContent

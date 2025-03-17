@@ -1,0 +1,47 @@
+@use "../foundation/mixin" as mixin;
+@use "../foundation/variable" as var;
+
+#news,
+#info,
+#price {
+  .l-breadcrumb_list {
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0px;
+    margin-top: 48px;
+
+    li {
+      display: flex;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      box-shadow: none;
+      border-radius: 0px;
+      font-size: 15px;
+      font-family: var.$yomogi;
+    }
+    a {
+      padding: 0px;
+    }
+  }
+}
+
+.l-breadcrumb_list {
+  li {
+    align-items: center;
+  }
+  a {
+    height: 100%;
+    font-size: 15px;
+  }
+  .icon {
+    width: 15px;
+    height: 100%;
+    background: url(../img/home.png) no-repeat;
+    background-position: center;
+    background-size: 18px;
+  }
+  .visited {
+    border-bottom: 1px solid #111;
+  }
+}

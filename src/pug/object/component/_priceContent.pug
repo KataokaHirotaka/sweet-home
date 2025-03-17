@@ -1,0 +1,51 @@
+-
+  var arr = [
+    {
+      title: "月額料金案内",
+      link: "price/month",
+      img: "/assets/img/02.jpg",
+      date: "2025/02/17",
+      tagName: "料金案内",
+      tagColor: "blue"
+    },
+    {
+      title: "一時預かり料金案内",
+      link: "price/temporary",
+      img: "/assets/img/02.jpg",
+      date: "2025/02/17",
+      tagName: "料金案内",
+      tagColor: "blue"
+    },
+    {
+      title: "その他の料金案内",
+      link: "price/other",
+      img: "/assets/img/02.jpg",
+      date: "2025/02/17",
+      tagName: "料金案内",
+      tagColor: "blue"
+    }
+  ]
+
+  var catogoryArr =[
+    {
+      txt: "料金案内",
+      link: "info/price",
+      color: "blue"
+    },
+  ]
+
+.list-wrapper 
+  p.fadeIn カテゴリー:
+  ul.category-list.fadeIn
+    each val in catogoryArr
+      li(class=val.color)
+        a(href=`${val.link}`) #{val.txt}
+ul.list.fadeIn
+  each val in arr
+    li.list-item
+      a(href=`${val.link}`)
+        span(class=val.tagColor) #{val.tagName}
+        figure
+          img(src=val.img)
+        h3 #{val.title}
+        p.tag

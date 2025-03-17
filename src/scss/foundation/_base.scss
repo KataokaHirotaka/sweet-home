@@ -52,6 +52,22 @@ img {
   backface-visibility: hidden;
 }
 
+.red {
+  color: #dc143c;
+}
+
+.orange {
+  color: #d68331;
+}
+
+.green {
+  color: #3cb371;
+}
+
+.blue {
+  color: #185ca0;
+}
+
 .wrapper {
   display: block;
   width: 100%;
@@ -194,8 +210,9 @@ img {
   }
 }
 
-#new,
-#info {
+#news,
+#info,
+#price {
   ul {
     display: flex;
     flex-wrap: wrap;

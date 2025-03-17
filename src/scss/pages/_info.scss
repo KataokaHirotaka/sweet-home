@@ -1,0 +1,29 @@
+@use "./../foundation/mixin" as mixin;
+@use "./../foundation/variable" as var;
+
+.info,
+.month,
+.other,
+.price {
+  #info {
+    .l-breadcrumbList_item {
+      background-color: transparent;
+    }
+    .container {
+      margin: 0 auto;
+    }
+  }
+}
+
+// ================== 料金ページ ====================
+.price {
+  #info {
+    .l-breadcrumb_list {
+      margin-top: 48px;
+    }
+
+    .list-wrapper {
+      margin-top: 40px;
+    }
+  }
+}

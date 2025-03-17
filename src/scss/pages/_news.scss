@@ -1,0 +1,116 @@
+@use "./../foundation/mixin" as mixin;
+@use "./../foundation/variable" as var;
+
+.post {
+  #news {
+    h3 {
+      margin-top: 60px;
+      padding-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .p-date {
+      margin-top: 16px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .p-content_wrapper {
+      margin-top: 10px;
+      p {
+        line-height: 3;
+      }
+    }
+
+    .p-img_wrapper {
+      margin-top: 60px;
+    }
+  }
+}
+
+// ニュースディレクトリのページのみスタイル変更
+.news,
+.post {
+  .main {
+    @include mixin.mq(medium) {
+      // overflow: hidden;
+      display: block;
+    }
+  }
+  .l-header {
+    .l-header_navBtn {
+      span {
+        background-color: var.$main-color;
+      }
+    }
+  }
+}
+
+// 最近の投稿セクション
+.post,
+.news {
+  #news,
+  #post {
+    aside {
+      margin-top: 80px;
+      padding: 20px 10px;
+      border-radius: 4px;
+      border: 1px solid #d3d3d3;
+      @include mixin.mq(medium) {
+        // float: right;
+        position: absolute;
+        right: 0;
+        top: 196px;
+        width: 220px;
+        margin-top: 0px;
+      }
+    }
+    article {
+      @include mixin.mq(medium) {
+        width: calc(100% - 220px);
+      }
+    }
+    .list {
+      @include mixin.mq(medium) {
+        width: calc(100% - 220px);
+      }
+      li {
+        @include mixin.mq(medium) {
+          width: 100%;
+        }
+      }
+      a {
+        @include mixin.mq(medium) {
+          display: flex;
+        }
+      }
+    }
+    .news-aside_content {
+      ul {
+        margin-top: 30px;
+        padding: 0 10px;
+      }
+      li {
+        background-color: transparent;
+        box-shadow: none;
+        @include mixin.mq(medium) {
+          width: 100%;
+        }
+      }
+
+      h3 {
+        margin-top: 0px;
+        padding: 8px 4px;
+        border: none;
+        background-color: var.$main-color;
+        color: #fff;
+      }
+      a {
+        padding: 0;
+        text-decoration: underline;
+        color: var.$mainTxt-color;
+        font-weight: bold;
+      }
+    }
+  }
+}

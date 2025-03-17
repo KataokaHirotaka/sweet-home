@@ -1,0 +1,39 @@
+extends ./../../../layout/_layout
+
+block meta
+  -
+    const meta = {
+      title:"",
+      description: "",
+    }
+
+block name
+  - const name = "other"
+
+block contents
+  main#info
+    .container 
+      h2 その他の料金案内
+      include ./../../../layout/_breadcrumb
+      .txt-block
+        .txt-block_container
+          p その他の料金のご案内です。
+          figure
+            img(src="/assets/img/01.jpg", alt="")
+          p 
+            a(href="/info/price/month") 月極契約の料金表はこちら
+          p 
+            a(href="/info/price/temporary") 一時預かり料金表はこちら
+          p お支払い方法
+          span 各種お支払い方法対応しております。
+          p 現金・クレジットカード
+          figure
+            img(src="/assets/img/card.png", alt="現金・クレジットカード")
+          p 電子マネー
+          figure 
+            img(src="/assets/img/densi.png", alt="電子マネー")
+      include ./../../../object/component/_priceTable
+      .btn-wrapper
+        button 
+          a(href="/info")
+            span 一覧へ戻る

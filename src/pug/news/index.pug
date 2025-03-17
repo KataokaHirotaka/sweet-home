@@ -1,0 +1,19 @@
+extends ./../layout/_layout
+
+block meta
+  -
+    const meta = {
+      title:"",
+      description: "",
+    }
+
+block name
+  - const name = "news"
+
+
+block contents
+  main.main#news.container
+    h2 新着情報
+    include ./../layout/_breadcrumb
+    ul.list.fadeIn#blog-list
+    include ./../layout/_aside

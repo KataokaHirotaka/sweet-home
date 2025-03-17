@@ -1,0 +1,85 @@
+@use "../../foundation/mixin" as mixin;
+@use "../../foundation/variable" as var;
+
+#news {
+  ul {
+    margin-top: 48px;
+  }
+  li {
+    background-color: #ffe4e1;
+    box-shadow: 0px 0px 16px -6px rgba(53, 34, 54, 0.6);
+    border-radius: 10px;
+  }
+  a {
+    display: block;
+    padding: 14px;
+    @include mixin.mq(medium) {
+      padding: 16px;
+    }
+
+    .c-content_wrapper {
+      width: 100%;
+      margin-top: 8px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2; /* 任意の行数を指定 */
+      text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      -webkit-text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+    }
+
+    & > p {
+      margin: 8px 0;
+      font-weight: bold;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 12px;
+      padding: 4px 0;
+      background-color: var.$mainTxt-color;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+    }
+
+    span {
+      margin-top: 8px;
+      padding: 2px 4px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .red {
+      background-color: #bf4ea8;
+    }
+
+    .blue {
+      background-color: #185ca0;
+    }
+  }
+  figure {
+    display: block;
+    height: 50%;
+  }
+  h3 {
+    margin-top: 10px;
+    border-bottom: 1px solid var.$mainTxt-color;
+  }
+  // p {
+  //   margin-top: 8px;
+  // }
+  .btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

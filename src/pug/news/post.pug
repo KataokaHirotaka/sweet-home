@@ -1,0 +1,25 @@
+extends ./../layout/_layout
+
+block meta
+  -
+    const meta = {
+      title:"",
+      description: "",
+    }
+
+block name
+  - const name = "post"
+
+
+block contents
+  main.main#news.container
+    h2 新着情報
+    //- ul.c-bleadcrumbs
+    include ./../layout/_breadcrumb
+    article
+      h3.p-ttl
+      p.p-date
+      .p-content_wrapper
+      figure.p-img_wrapper
+        img(src="", alt="" class="p-img")
+    include ./../layout/_aside

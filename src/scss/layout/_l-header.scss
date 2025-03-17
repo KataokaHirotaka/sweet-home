@@ -20,9 +20,36 @@
   &.fixed {
     .l-header_inner {
       background: rgba(255, 255, 255, 0.8);
-      span {
-        background-color: var.$main-color;
+      .l-header_navBtn {
+        span {
+          background-color: var.$main-color;
+        }
       }
+    }
+  }
+
+  h1 {
+    position: absolute;
+    left: 16px;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff,
+      1px -1px 0 #fff, 0px 1px 0 #fff, 0-1px 0 #fff, -1px 0 0 #fff, 1px 0 0 #fff;
+    border: none;
+    .green {
+      color: #74e3a6;
+    }
+
+    .red {
+      color: #ffa6b8db;
+    }
+
+    .orange {
+      color: #f4c08d;
+    }
+    .blue {
+      color: #5999d8;
+    }
+    a {
+      font-family: var.$yusei;
     }
   }
   .l-header_inner {
@@ -75,10 +102,6 @@
         bottom: 0px;
       }
     }
-  }
-
-  .fixed {
-    background: rgba(255, 255, 255, 0.8);
   }
 
   // ========== nav ===========
