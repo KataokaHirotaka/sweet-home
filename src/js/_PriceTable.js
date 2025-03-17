@@ -12,13 +12,13 @@ export default class Nav {
 
   swithDisplay() {
     // 料金案内テーブルの表示切り替え
-    if (this.path === "/info/price/month") {
+    if (this.path === "/info/price/month/") {
       this.$tempTable.hide();
       this.$otherTable.hide();
-    } else if (this.path === "/info/price/temporary") {
+    } else if (this.path === "/info/price/temporary/") {
       this.$monthTable.hide();
       this.$otherTable.hide();
-    } else if (this.path === "/info/price/other") {
+    } else if (this.path === "/info/price/other/") {
       this.$monthTable.hide();
       this.$tempTable.hide();
     }
