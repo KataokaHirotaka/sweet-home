@@ -1,45 +1,67 @@
 -
   var monthArr = [
     {
-      ttl: "0歳児（生後6ヶ月以降）",
-      txt: "45000円（税込495000円）"
+      th_ttl: "対象児",
+      th_ttl_2: "料金"
+    },
+    {
+      ttl: "0歳児",
+      ttl_2: "(生後6ヶ月以降)",
+      txt: "49500円"
     },
     {
       ttl: "1歳児",
-      txt: "41000円（税込45100円）"
+      txt: "45100円"
     },
     {
       ttl: "2歳児",
-      txt: "39000円（税込42900円）"
+      txt: "42900円"
     },
     {
       ttl: "3歳児以上",
-      txt: "37000円（税込40700円）"
+      txt: "40700円"
     },
     {
       ttl: "小学生以上",
-      txt: "34000円（税込37400円）"
+      txt: "37400円"
     },
+  ]
+
+  var monthArr_2 = [
     {
       ttl: "日次保育料金",
-      txt: "300円/1時間（税込330円）"
+      txt: "330円/1時間"
     },
+  ]
+
+  var monthArr_3 = [
     {
       ttl: "土日・祝日利用料金",
-      txt: "1000円/1日（税込1100円）"
+      txt: "1100円/1日"
+    },
+  ]
+
+  var monthArr_4 = [
+    {
+      ttl: "キャンセル料金/",
+      ttl_2: "当日キャンセル",
+      txt: "1650円"
     },
     {
-      ttl: "キャンセル料金/当日キャンセル",
-      txt: "1500円（税込1650円）"
+      ttl: "キャンセル料金/",
+      ttl_2: "無断キャンセル",
+      txt: "3300円"
     },
-    {
-      ttl: "キャンセル料金/無断キャンセル",
-      txt: "3000円（税込3300円）"
-    },
+  ]
+
+  var monthArr_5 = [
     {
       ttl: "AM4時以降の延長料金",
-      txt: "400円/15分（税込440円）"
+      txt: "440円/15分"
     },
+  ]
+
+  var monthArr_6 = [
     {
       ttl: "6時以降お迎えの違約金について",
       ttl_2: "AM4:00までに連絡あり",
@@ -52,43 +74,59 @@
     },
   ]
 
-  var tempArr = [
+  var tempArr_1 = [
     {
       ttl: "基本料金/平日",
-      txt: "1500円/一日（税込1650円）"
+      txt: "1650円/1日"
     },
     {
       ttl: "基本料金/土日祝日",
-      txt: "2000円/一日（税込2200円）"
+      txt: "2200円/1日"
+    },
+  ]
+
+
+  var tempArr_2 = [
+    {
+      th_ttl: "対象児",
+      th_ttl_2: "料金"
     },
     {
       ttl: "0歳児（生後6ヶ月以降）",
-      txt: "1400円/1時間（税込1540円）"
+      txt: "1540円/1時間"
     },
     {
       ttl: "1歳児",
-      txt: "1300円/1時間（税込1430円）"
+      txt: "1430円/1時間"
     },
     {
       ttl: "2歳児",
-      txt: "1200円/1時間（税込1320円）"
+      txt: "1320円/1時間"
     },
     {
       ttl: "3歳児以上",
-      txt: "1100円/1時間（税込1210円）"
+      txt: "1210円/1時間"
     },
+  ]
+  var tempArr_3 = [
     {
       ttl: "キャンセル料金/当日キャンセル",
-      txt: "1500円（税込1650円）"
+      txt: "1650円"
     },
     {
       ttl: "キャンセル料金/無断キャンセル",
-      txt: "3000円（税込3300円）"
+      txt: "3300円"
     },
+  ]
+
+  var tempArr_4 = [
     {
       ttl: "AM4時以降の延長料金",
-      txt: "400円/15分（税込440円）"
+      txt: "440円/15分"
     },
+  ]
+
+  var tempArr_5 = [
     {
       ttl: "6時以降お迎えの違約金について",
       ttl_2: "AM4:00までに連絡あり",
@@ -103,20 +141,20 @@
   var otherArr = [
     {
       ttl: "オムツ代",
-      txt: "300円/一枚（税込330円）"
+      txt: "330円/1枚"
     },
     {
       ttl: "ミルク代",
-      txt: "400円/一回（税込440円）"
+      txt: "440円/1回"
     },
     {
       ttl: "シャワー代",
-      txt: "1000円/1回（税込1100円）"
+      txt: "1100円/1回"
     },
     {
       ttl: "シーツ代",
-      txt: "500円/月（税込550円）",
-      txt_2: "200円/回（税込220円）"
+      txt: "550円/月",
+      txt_2: "220円/回"
     },
     {
       ttl: "送迎代",
@@ -124,31 +162,109 @@
     },
     {
       ttl: "無断登園",
-      txt: "3000円（税込3300円）"
+      txt: "3300円"
     }
   ]
 
 
 
 h3 概要
-table.c-price_table#js-monthTable.fadeIn
-  each val in monthArr
-    tr
-      th #{val.ttl}
-        br
-        |#{val.ttl_2}
-      td #{val.txt}
-table.c-price_table#js-tempTable
-  each val in tempArr
-    tr
-      th #{val.ttl}
-        br
-        |#{val.ttl_2}
-      td #{val.txt}
-table.c-price_table#js-otherTable
-  each val in otherArr
-    tr
-      th #{val.ttl}
-        br
-        |#{val.ttl_2}
-      td #{val.txt}
+.c-priceTable_wrapper#js-monthTable
+  table.c-price_table.fadeIn
+    each val in monthArr
+      if val.th_ttl
+        tr
+          th.center #{val.th_ttl}
+          th.center #{val.th_ttl_2}
+      else
+        tr
+          td #{val.ttl}
+            br
+            |#{val.ttl_2}
+          td #{val.txt}
+  table.c-price_table.fadeIn
+    each val in monthArr_2
+      tr
+        td.bold #{val.ttl}
+          br
+          |#{val.ttl_2}
+        td #{val.txt}
+  table.c-price_table.fadeIn
+    each val in monthArr_3
+      tr
+        td.bold #{val.ttl}
+          br
+          |#{val.ttl_2}
+        td #{val.txt}
+  table.c-price_table.fadeIn
+    each val in monthArr_4
+      tr
+        td.bold #{val.ttl}
+          br
+          |#{val.ttl_2}
+        td #{val.txt}
+  table.c-price_table.fadeIn
+    each val in monthArr_5
+      tr
+        td.bold #{val.ttl}
+          br
+          |#{val.ttl_2}
+        td #{val.txt}
+  table.c-price_table.fadeIn
+    each val in monthArr_6
+      tr
+        td.bold #{val.ttl}
+          br
+          |#{val.ttl_2}
+        td #{val.txt}
+
+.c-priceTable_wrapper#js-tempTable
+  table.c-price_table
+    each val in tempArr_1
+      tr
+        th #{val.ttl}
+          br
+          |#{val.ttl_2}
+        td #{val.txt}
+  table.c-price_table
+    each val in tempArr_2
+      if val.th_ttl
+        tr
+          th.center #{val.th_ttl}
+          th.center #{val.th_ttl_2}
+      else
+        tr
+          td #{val.ttl}
+            br
+            |#{val.ttl_2}
+          td #{val.txt}
+  table.c-price_table
+    each val in tempArr_3
+      tr
+        th #{val.ttl}
+          br
+          |#{val.ttl_2}
+        td #{val.txt}
+  table.c-price_table
+    each val in tempArr_4
+      tr
+        th #{val.ttl}
+          br
+          |#{val.ttl_2}
+        td #{val.txt}
+  table.c-price_table
+    each val in tempArr_5
+      tr
+        th #{val.ttl}
+          br
+          |#{val.ttl_2}
+        td #{val.txt}
+
+.c-priceTable_wrapper#js-otherTable
+  table.c-price_table
+    each val in otherArr
+      tr
+        th #{val.ttl}
+          br
+          |#{val.ttl_2}
+        td #{val.txt}

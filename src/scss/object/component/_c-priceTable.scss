@@ -69,32 +69,39 @@
 }
 
 .c-price_table {
-  margin: 0 auto;
-  tbody {
-    display: block;
-    border: 1px solid #ddd;
+  max-width: 380px;
+  width: 100%;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  background-color: #fff;
+
+  .bold {
+    font-weight: bold;
   }
 
   tr {
-    display: flex;
-    flex-wrap: wrap;
+    max-width: 380px;
+    width: 100%;
+  }
 
-    &:not(:last-child) {
-      border-bottom: 1px solid #ddd;
+  & > tr {
+    th {
+      // text-align: center;
     }
+  }
+
+  .center {
+    text-align: center;
+  }
+  th {
+    text-align: left;
   }
 
   th,
   td {
+    width: 50%;
     padding: 1rem 1.5rem;
-  }
-
-  th {
-    width: 100%;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  td {
-    width: 100%;
+    border: 1px solid #ddd;
   }
 }
