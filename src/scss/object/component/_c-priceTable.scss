@@ -27,7 +27,7 @@
         font-size: 18px;
         font-weight: bold;
 
-        &:nth-child(5) {
+        &:nth-child(6) {
           margin-top: 18px;
           font-size: 22px;
           text-decoration: underline;
@@ -40,6 +40,10 @@
       figure {
         margin-top: 10px;
       }
+    }
+
+    strong {
+      margin-top: 10px;
     }
     .btn-wrapper {
       height: 38px;
@@ -83,12 +87,6 @@
   tr {
     max-width: 380px;
     width: 100%;
-  }
-
-  & > tr {
-    th {
-      // text-align: center;
-    }
   }
 
   .center {
