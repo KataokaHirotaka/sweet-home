@@ -15,7 +15,8 @@ html(lang="ja")
 		link(rel="stylesheet", href="/assets/css/index.css")
 		script(src="/assets/js/vendor.js" defer)
 		script(src="/assets/js/index.js" defer)
-	body(class=`${name}`)
+	body(class="home" id="loading")
+		<div class="loader">Loading...</div>
 		include ./_header
 		.wrapper
 			block contents

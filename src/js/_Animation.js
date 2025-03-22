@@ -1,12 +1,15 @@
 export default class Animation {
   constructor() {
     this.$fadeInItems = $(".fadeIn");
+    this.$loading = $("#loading");
+    this.$loader = $(".loader");
   }
   init() {
     this.addEvents();
   }
   addEvents() {
     $(window).on("scroll", () => this.onScroll());
+    $(window).on("load", () => this.removeRoading());
   }
 
   onScroll() {
@@ -19,5 +22,13 @@ export default class Animation {
         $target.addClass("fadeIn-up");
       }
     });
+  }
+
+  removeRoading() {
+    setTimeout(() => {
+      console.log(this.$loading);
+      console.log(this.$loader);
+      this.$loading.addClass("loaded");
+    }, 3000);
   }
 }
