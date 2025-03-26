@@ -171,6 +171,7 @@ img {
 // ========== section-wrapper =========
 .container {
   max-width: 1020px;
+  margin: 0 auto;
 }
 .section-wrapper {
   @include mixin.mq(medium) {
