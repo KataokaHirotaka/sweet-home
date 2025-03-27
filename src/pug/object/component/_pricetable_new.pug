@@ -1,0 +1,201 @@
+-
+  var monthArr = [
+    {
+      th_ttl: "対象児",
+      th_ttl_2: "料金"
+    },
+    {
+      ttl: "6ヶ月~12ヶ月",
+      txt: "49500円",
+      class: "orange",
+    },
+    {
+      ttl: "1歳",
+      txt: "45100円",
+      class: "blue",
+    },
+    {
+      ttl: "2歳",
+      txt: "42900円",
+      class: "green",
+    },
+    {
+      ttl: "3歳以上",
+      txt: "40700円",
+      class: "red",
+    },
+    {
+      ttl: "小学生以上",
+      txt: "37400円"
+    },
+    {
+      ttl: "日次保育料金",
+      txt: "330円/1時間",
+      tr_class: "red"
+    },
+    {
+      ttl: "土日・祝日利用料金",
+      txt: "1100円/1日",
+      tr_class: "blue"
+    },
+    {
+      ttl: "当日キャンセル",
+      //- ttl_2: "当日キャンセル",
+      txt: "1650円"
+    },
+    {
+      ttl: "無断キャンセル",
+      //- ttl_2: "無断キャンセル",
+      txt: "3300円"
+    },
+    {
+      ttl: "AM4時以降の延長料金",
+      txt: "440円/15分"
+    },
+    {
+      ttl: "6時以降お迎えの違約金/",
+      ttl_2: "AM4:00までに連絡あり",
+      txt: "3300円",
+      class: "orange",
+    },
+    {
+      ttl: "6時以降お迎えの違約金/",
+      ttl_2: "AM4:00までに連絡なし",
+      txt: "6600円",
+      class: "blue",
+    },
+  ]
+
+
+  var tempArr_1 = [
+    {
+      ttl: "基本料金/平日",
+      txt: "1650円/1日"
+    },
+    {
+      ttl: "基本料金/土日祝日",
+      txt: "2200円/1日"
+    },
+    {
+      th_ttl: "対象児",
+      th_ttl_2: "料金"
+    },
+    {
+      ttl: "6ヶ月~12ヶ月",
+      txt: "1540円/1時間",
+      class: "red",
+    },
+    {
+      ttl: "1歳",
+      txt: "1430円/1時間",
+      class: "blue",
+    },
+    {
+      ttl: "2歳",
+      txt: "1320円/1時間",
+      class: "green",
+    },
+    {
+      ttl: "3歳以上",
+      txt: "1210円/1時間",
+      class: "orange",
+    },
+    {
+      ttl: "当日キャンセル",
+      txt: "1650円"
+    },
+    {
+      ttl: "無断キャンセル",
+      txt: "3300円"
+    },
+    {
+      ttl: "AM4時以降の延長料金",
+      txt: "440円/15分"
+    },
+    {
+      ttl: "6時以降お迎えの違約金/",
+      ttl_2: "AM4:00までに連絡あり",
+      txt: "3300円",
+      tr_class: "red"
+      
+    },
+    {
+      ttl: "6時以降お迎えの違約金/",
+      ttl_2: "AM4:00までに連絡なし",
+      txt: "6600円",
+    },
+  ]
+
+  var otherArr = [
+    {
+      ttl: "遅延損害金",
+      ttl_2: "※お支払いが翌日以降になる方",
+      ttl_3: "月極限り/一時預かり両方適用します",
+      txt: "当日料金の10%"
+    },
+    //- {
+    //-   ttl: "ミルク代",
+    //-   txt: "440円/1回"
+    //- },
+    //- {
+    //-   ttl: "シャワー代",
+    //-   txt: "1100円/1回"
+    //- },
+    //- {
+    //-   ttl: "シーツ代",
+    //-   txt: "550円/月",
+    //-   txt_2: "220円/回"
+    //- },
+    //- //- {
+    //- //-   ttl: "送迎代",
+    //- //-   txt: "場所によって料金が異なるため、公式LINE経由でご相談ください"
+    //- //- },
+    //- {
+    //-   ttl: "無断登園",
+    //-   txt: "3300円"
+    //- }
+  ]
+
+
+
+h3 概要
+.c-priceTable_wrapper#js-monthTable
+  //- table.c-price_table.fadeIn
+  //-   tr 
+  //-     <th class="center first" colspan="2">月額</th>
+  //-   each val in monthArr
+  //-     if val.th_ttl
+  //-       tr
+  //-         th.center.second #{val.th_ttl}
+  //-         th.center.second #{val.th_ttl_2}
+  //-     else
+  //-       <tr class="#{val.tr_class}">
+  //-         <td class="center #{val.class}">#{val.ttl}<br>#{val.ttl_2}</td>
+  //-           //- br
+  //-           //- |#{val.ttl_2}
+  //-         <td class="center #{val.class}">#{val.txt}</td>
+  //-       </tr>
+  table.c-price_table
+    //- tr 
+    //-   <th class="center first" colspan="2">一時預かり</th>
+    each val in otherArr
+      if val.th_ttl
+        tr
+          th.center.second #{val.th_ttl}
+          th.center.second #{val.th_ttl_2}
+      else
+        <tr class="#{val.tr_class}">
+          <td class="center #{val.class}">#{val.ttl}<br><strong>#{val.ttl_2}</strong><br><strong>#{val.ttl_3}</strong></td>
+            //- br
+            //- |#{val.ttl_2}
+          <td class="center #{val.class}">#{val.txt}</td>
+        </tr>
+  //- table.c-price_table
+    tr 
+      <th class="center first" colspan="2">その他</th>
+    each val in otherArr
+      tr
+        th #{val.ttl}
+          br
+          |#{val.ttl_2}
+        td #{val.txt}

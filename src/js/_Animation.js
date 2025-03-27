@@ -29,6 +29,6 @@ export default class Animation {
       console.log(this.$loading);
       console.log(this.$loader);
       this.$loading.addClass("loaded");
-    }, 3000);
+    }, 1500);
   }
 }
