@@ -74,6 +74,15 @@
     },
   ]
 
+  var monthArr_7 = [
+    {
+      ttl: "遅延損害金",
+      ttl_2: "※お支払いが翌日以降になる方",
+      ttl_3: "※月極預かり/一時預かり両方適用します",
+      txt: "当日料金の10%"
+    },
+  ]
+
   var tempArr_1 = [
     {
       ttl: "基本料金/平日",
@@ -138,6 +147,14 @@
       txt: "6600円"
     },
   ]
+  var tempArr_6 = [
+    {
+      ttl: "遅延損害金",
+      ttl_2: "※お支払いが翌日以降になる方",
+      ttl_3: "※月極預かり/一時預かり両方適用します",
+      txt: "当日料金の10%"
+    },
+  ]
   var otherArr = [
     {
       ttl: "オムツ代",
@@ -157,13 +174,9 @@
       txt_2: "220円/回"
     },
     {
-      ttl: "送迎代",
-      txt: "場所によって料金が異なるため、公式LINE経由でご相談ください"
-    },
-    {
       ttl: "無断登園",
       txt: "3300円"
-    }
+    },
   ]
 
 
@@ -217,6 +230,15 @@ h3 概要
           br
           |#{val.ttl_2}
         td #{val.txt}
+  table.c-price_table.fadeIn
+    each val in monthArr_7
+      tr
+        td.bold #{val.ttl}
+          br
+          |#{val.ttl_2}
+          br
+          |#{val.ttl_3}
+        td #{val.txt}
 
 .c-priceTable_wrapper#js-tempTable
   table.c-price_table
@@ -258,6 +280,15 @@ h3 概要
         th #{val.ttl}
           br
           |#{val.ttl_2}
+        td #{val.txt}
+  table.c-price_table
+    each val in tempArr_6
+      tr
+        th #{val.ttl}
+          br
+          |#{val.ttl_2}
+          br
+          |#{val.ttl_3}
         td #{val.txt}
 
 .c-priceTable_wrapper#js-otherTable
