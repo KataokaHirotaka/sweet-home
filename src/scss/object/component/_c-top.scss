@@ -59,6 +59,9 @@
     figure {
       display: flex;
       margin: 16px 0;
+      @include mixin.mq(medium) {
+        max-width: 600px;
+      }
     }
   }
   h2,
