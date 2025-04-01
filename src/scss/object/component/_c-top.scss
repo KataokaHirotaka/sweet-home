@@ -54,6 +54,13 @@
     height: 100%;
     padding: 0 10px;
   }
+
+  h2 {
+    figure {
+      display: flex;
+      margin: 16px 0;
+    }
+  }
   h2,
   p {
     font-family: var.$yusei;
