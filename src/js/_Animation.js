@@ -9,7 +9,7 @@ export default class Animation {
   }
   addEvents() {
     $(window).on("scroll", () => this.onScroll());
-    $(window).on("load", () => this.removeRoading());
+    // $(window).on("load", () => this.removeRoading());
   }
 
   onScroll() {
