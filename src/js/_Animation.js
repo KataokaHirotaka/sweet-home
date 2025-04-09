@@ -9,6 +9,7 @@ export default class Animation {
   }
   addEvents() {
     $(window).on("scroll", () => this.onScroll());
+    // iosでローディングが止まらないので一旦やめる
     // $(window).on("load", () => this.removeRoading());
   }
 
