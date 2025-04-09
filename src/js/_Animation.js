@@ -25,10 +25,11 @@ export default class Animation {
   }
 
   removeRoading() {
+    // ローディング画面のアニメーション
     setTimeout(() => {
       console.log(this.$loading);
       console.log(this.$loader);
       this.$loading.addClass("loaded");
-    }, 1500);
+    }, 1000);
   }
 }
