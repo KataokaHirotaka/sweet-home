@@ -66,8 +66,8 @@
   ]
 
 .list-wrapper 
-  p.fadeIn カテゴリー:
-  ul.category-list.fadeIn
+  p カテゴリー:
+  ul.category-list
     each val in catogoryArr
       li(class=val.color)
         a(href=`${val.link}`) #{val.txt}
