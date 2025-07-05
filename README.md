@@ -1,6 +1,6 @@
 ### テストサイト
 
-https://sweet-home-site.netlify.app/
+NPM
 netlify と github が連携している
 
 ### 本番サイト
@@ -17,3 +17,9 @@ https://sweet-home.microcms.io/apis/blog
 960px
 
 # sweet_home
+
+### Github に push するまでの流れ
+
+git add .
+git commit -m "コメントをここに書く"
+git push
