@@ -3,7 +3,6 @@
 
 .l-footer {
   position: relative;
-  padding-top: 20px;
   background-color: var.$second-color;
   color: #000;
   z-index: 50;
@@ -22,7 +21,6 @@
       justify-content: flex-start;
     }
     .l-footerNavList_item {
-      // width: 50%;
       a {
         font-size: 12px;
         cursor: pointer;
@@ -33,7 +31,6 @@
     display: grid;
     place-items: center;
     height: 40px;
-    margin-top: 30px;
     background-color: var.$main-color;
     .l-footerBottom_txt {
       font-family: var.$jost;
